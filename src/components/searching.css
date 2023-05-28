@@ -1,0 +1,84 @@
+.searching {
+    align-self: flex-start;
+    position: relative;
+    position: sticky;
+    top: 12rem;
+    left: 1rem;
+    width: 600px;
+    height: 100px;
+    /* background-color: red; */
+    margin-bottom: 5rem;
+    margin-top: 2rem;
+    font-size: 5rem;
+    color: white;
+    padding: 2rem;
+    z-index: 100;
+
+
+}
+
+.searchicon {
+    position: absolute;
+    top: 0.85rem;
+    left: 1rem;
+    font-size: 4.5rem;
+
+}
+
+.searchingfieldstart {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: 130px;
+    width: 450px;
+    height: 75px;
+    background-color: rgba(20, 25, 30, 1);
+    color: white;
+    transition: 0.8s;
+    animation: searchingfieldstart 0.5s ease;
+    border: none;
+    outline: none;
+    border-radius: 5%;
+    font-size: 2.5rem;
+    padding-left: 0.7rem;
+
+}
+
+@keyframes searchingfieldstart {
+    0% {
+        opacity: 20%;
+        width: 0;
+    }
+
+    100% {
+        opacity: 90%;
+        width: 450px;
+    }
+}
+
+.searchingfieldend {
+    position: absolute;
+    top: calc(50% - 35px);
+    left: 130px;
+    width: 0;
+    height: 70px;
+    background-color: rgba(20, 25, 30, 1);
+    transition: 0.8s;
+    animation: searchingfieldend 0.5s ease;
+    border: none;
+    outline: none;
+    /* border-radius: 2%; */
+    font-size: 3rem;
+}
+
+@keyframes searchingfieldend {
+    0% {
+        width: 450px;
+        opacity: 100%;
+    }
+
+    100% {
+
+        width: 0;
+        opacity: 20%;
+    }
+}

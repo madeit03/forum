@@ -1,0 +1,300 @@
+.formlogin {
+    position: absolute;
+    width: 900px;
+    top: 23rem;
+
+    left: calc(50% - 450px);
+    background-color: rgba(0, 0, 0, 65%);
+    border-radius: 1%;
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+    padding-bottom: 8rem;
+    border: 1px solid white;
+    z-index: 25;
+    -webkit-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    /* align-items: center; */
+
+}
+
+.formlogin>div {
+    text-align: center;
+    width: 100%;
+    /* background-color: red; */
+    padding-top: 5rem;
+
+    font-size: 5rem;
+    color: white;
+}
+
+.formlogin>input {
+    outline: none;
+    border: none;
+    border-bottom: 3.5px solid white;
+    background-color: rgba(0, 0, 0, 0%);
+    width: 480px;
+    height: 110px;
+    display: block;
+    font-size: 2.5rem;
+    outline: none;
+    color: white;
+    border-radius: 5%;
+    padding-top: 15px;
+    padding-left: 2rem;
+}
+
+.formlogin>input:focus {
+    border-bottom: 8px solid rgba(255, 50, 70, 0.5);
+
+}
+
+.formlogin>.inputzaloguj {
+    padding-top: 0;
+    padding-left: 0;
+    text-align: center;
+    border-radius: 1%;
+    margin-top: 4rem;
+    width: 580px;
+    height: 140px;
+    font-size: 4rem;
+    cursor: pointer;
+    transition: 0.2s;
+    border: 3.5px solid white;
+
+}
+
+.formlogin>.inputzaloguj:hover {
+    border: 5px solid rgba(255, 50, 70, 0.5);
+}
+
+
+
+.formlogin>.logged {
+    position: fixed;
+    width: 100%;
+    /* min-height: 15rem; */
+    top: -100%;
+    left: 0;
+    background-color: rgb(59, 134, 69);
+    animation: logAnimation 0.5s linear;
+    padding-bottom: 5rem;
+    border-radius: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+
+
+}
+
+.formlogin>.notLogged {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 25, 41);
+    border-radius: 2%;
+    animation: logAnimation 3s linear;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+@keyframes logAnimation {
+    0% {
+        top: -100%;
+    }
+
+    10% {
+        top: 15rem;
+    }
+
+    50% {
+        top: 15rem;
+    }
+
+    80% {
+        top: 15rem;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+@media(max-width:1400px) {
+    .formlogin {
+        width: 700px;
+        left: calc(50% - 350px);
+    }
+
+    .formlogin>.logged {
+        font-size: 3rem;
+    }
+
+    .formlogin>.notLogged {
+        font-size: 3rem;
+    }
+
+    .formlogin>div {
+        text-align: center;
+        width: 100%;
+        /* background-color: red; */
+        padding-top: 5rem;
+        padding-bottom: 1rem;
+        font-size: 4rem;
+        color: white;
+    }
+
+    .formlogin>.inputzaloguj {
+        padding-top: 0;
+        padding-left: 0;
+        text-align: center;
+        border-radius: 1%;
+        margin-top: 3rem;
+        width: 500px;
+        height: 130px;
+        font-size: 4rem;
+        cursor: pointer;
+        transition: 0.2s;
+        border: 3.5px solid white;
+
+    }
+
+}
+
+
+@media(max-width:900px) {
+    .formlogin {
+        padding-bottom: 4rem;
+        width: 500px;
+        left: calc(50% - 250px);
+        margin-bottom: 0;
+        gap: 3rem;
+
+
+    }
+
+    .formlogin>.logged {
+        font-size: 2.2rem;
+    }
+
+    .formlogin>.notLogged {
+        font-size: 2.2rem;
+        /* min-height: 2rem; */
+    }
+
+    .formlogin>div {
+        padding-bottom: 0;
+    }
+
+    .formlogin>input {
+
+        padding-left: 1rem;
+        width: 320px;
+    }
+
+    .formlogin>.inputzaloguj {
+        font-size: 3.5rem;
+        margin-top: 2.5rem;
+        width: 350px;
+    }
+}
+
+
+
+
+
+
+@media(max-width:600px) {
+    .formlogin {
+        top: 17rem;
+        padding-bottom: 3rem;
+        width: 350px;
+        left: calc(50% - 175px);
+
+    }
+
+    .formlogin>.logged {
+        font-size: 1.7rem;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+    }
+
+    .formlogin>.notLogged {
+        font-size: 1.7rem;
+        padding-bottom: 3rem;
+        padding-top: 3rem;
+        /* min-height: 2rem; */
+    }
+
+    .formlogin>div {
+        font-size: 3.5rem;
+    }
+
+    .formlogin>input {
+        width: 240px;
+        height: 80px;
+        font-size: 2rem;
+
+    }
+
+    .formlogin>.inputzaloguj {
+        width: 270px;
+        height: 110px;
+        font-size: 2.7rem;
+    }
+}
+
+@media(max-width:450px) {
+    .formlogin {
+        padding-bottom: 3rem;
+        width: 230px;
+        left: calc(50% - 115px);
+        gap: 1rem;
+
+    }
+
+    .formlogin>.logged {
+        font-size: 1.2rem;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .formlogin>.notLogged {
+        font-size: 1.2rem;
+        /* min-height: 2rem; */
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+    }
+
+    .formlogin>div {
+        font-size: 2rem;
+    }
+
+    .formlogin>input {
+        width: 150px;
+        height: 80px;
+        font-size: 1.5rem;
+
+    }
+
+    .formlogin>.inputzaloguj {
+        width: 160px;
+        height: 70px;
+        font-size: 1.8rem;
+        border: 1px solid white;
+
+    }
+}

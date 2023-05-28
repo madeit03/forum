@@ -1,0 +1,22 @@
+.mainwebsiteconainter {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 1500px;
+    overflow: hidden;
+    animation: firstSectionAnimation 0.5s ease-in-out;
+}
+
+
+
+@media(max-width:1400px) {
+    .mainwebsiteconainter {
+        min-height: 1400px;
+    }
+}
+
+@media(max-width:900px) {
+    .mainwebsiteconainter {
+        min-height: 1000px;
+    }
+}

@@ -1,0 +1,507 @@
+.navbar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 30;
+    width: 100%;
+    height: 12rem;
+    transition: 1s;
+    background-color: rgba(0, 0, 0, 20%);
+    -webkit-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+}
+
+.navbarDark {}
+
+.navbarlogo {
+    position: absolute;
+    top: calc(50% - 37%);
+    left: 2%;
+    width: 250px;
+    height: 156px;
+    color: white;
+    font-size: 3.7rem;
+    border-radius: 10%;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .navbarlogo:hover {
+    font-size: 4.2rem;
+    cursor: pointer;
+    background-color: rgba(255, 50, 70, 0.5);
+    text-shadow: 2px 2px 8px white;
+} */
+
+.navbarcontent {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    width: 600px;
+    height: 100%;
+    /* background-color: red; */
+
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.whologged {
+    border-radius: 5%;
+    top: 3rem;
+    /* left: calc(50% -); */
+    position: absolute;
+    width: 20rem;
+    text-align: center;
+    left: 20%;
+    /* height: 5rem; */
+    padding: 2rem;
+    font-size: 2rem;
+    color: rgb(59, 134, 69);
+    background-color: rgba(f, f, f, 0%);
+    font-weight: 900;
+}
+
+.navbarcontent>.link {
+    text-align: center;
+    flex-basis: 170px;
+    height: 106px;
+    color: #eee;
+    font-size: 2.7rem;
+    transition: 0.5s;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-decoration: none;
+    border-radius: 8%;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+
+}
+
+
+.navbarcontent>.link:hover {
+    border-radius: 8%;
+    font-size: 3rem;
+    cursor: pointer;
+    /* background-color: rgba(255, 50, 70, 0.5); */
+    text-shadow: 2px 2px 8px white;
+}
+
+.navbarBars {
+    display: none;
+}
+
+.navbarmobilestart {
+    display: none;
+}
+
+@media(max-width:1400px) {
+
+
+    .navbarcontent {
+        display: none;
+    }
+
+    .whologged {
+        display: none;
+    }
+
+    .navbarBars {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        font-size: 6.5rem;
+        /* background-color: red; */
+        color: white;
+        right: 0;
+        top: 2.2rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* transition: 0s linear; */
+    }
+
+    .navbarmobilestart {
+
+
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        min-height: 1700px;
+        background-color: black;
+        animation: navbarmobileAnimationStart .4s ease-in-out;
+        z-index: 40;
+        /* background-color: green; */
+
+    }
+
+    .imgnavbarmobile {
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        /* animation: navbarmobileAnimationStart .8s ease-in-out; */
+
+    }
+
+    .navbarmobileFinish {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100vh;
+        min-height: 2000px;
+        background-color: black;
+        z-index: 40;
+        animation: navbarmobileAnimationFinish .4s ease-in-out;
+    }
+
+    .navbarXmarkClassStart {
+
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 8rem;
+        cursor: pointer;
+        color: white;
+        animation: navbarXmarkStart 0.4s linear;
+        /* background-color: red; */
+
+    }
+
+    .navbarXmarkClassFinish {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 8rem;
+        cursor: pointer;
+        color: white;
+        animation: navbarXmarkFinish 0.4s linear;
+    }
+
+    .navbarmobilestartZero {
+        position: absolute;
+        top: 10rem;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 7rem;
+        /* background-color: rgba(10, 10, 10, 50%); */
+
+        z-index: 10;
+        color: white;
+        font-size: 4rem;
+        border-radius: 5%;
+        cursor: pointer;
+        text-decoration: none;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbarmobilestartZero:hover {
+        font-size: 4.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartFirst {
+        position: absolute;
+        top: 20rem;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 7rem;
+        /* background-color: rgba(10, 10, 10, 50%); */
+        z-index: 10;
+        color: white;
+        font-size: 4rem;
+        border-radius: 5%;
+        cursor: pointer;
+        text-decoration: none;
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbarmobilestartFirst:hover {
+        font-size: 4.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartSecond {
+        position: absolute;
+        top: 30rem;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 7rem;
+        /* background-color: rgba(10, 10, 10, 50%); */
+        z-index: 10;
+        color: white;
+        font-size: 4rem;
+        border-radius: 5%;
+        cursor: pointer;
+        text-decoration: none;
+
+
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbarmobilestartSecond:hover {
+        font-size: 4.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartThird {
+        position: absolute;
+        top: 40rem;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 7rem;
+        /* background-color: rgba(10, 10, 10, 50%); */
+        z-index: 10;
+        color: white;
+        font-size: 4rem;
+        border-radius: 5%;
+        cursor: pointer;
+        text-decoration: none;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .navbarmobilestartThird:hover {
+        font-size: 4.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartFourth {
+        position: absolute;
+        top: 50rem;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 7rem;
+
+        /* background-color: rgba(10, 10, 10, 50%); */
+        z-index: 10;
+        color: rgb(59, 134, 69);
+        font-size: 3rem;
+        border-radius: 5%;
+        cursor: pointer;
+        text-decoration: none;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: red; */
+        overflow: hidden;
+
+    }
+
+    .navbarmobilestartFourth:hover {
+        /* font-size: 3.7rem; */
+
+        transform: translateY(20px);
+    }
+
+
+    @keyframes navbarXmarkStart {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes navbarXmarkFinish {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        100% {
+            transform: rotate(-180deg);
+        }
+    }
+
+
+
+    @keyframes navbarmobileAnimationStart {
+        0% {
+            left: -100%;
+        }
+
+        100% {
+            left: 0;
+        }
+    }
+
+    @keyframes navbarmobileAnimationFinish {
+        0% {
+            left: 0;
+        }
+
+        100% {
+            left: -100%;
+        }
+    }
+
+    .navbarBars:hover {
+
+        text-shadow: 2px 2px 8px white;
+    }
+}
+
+
+
+
+
+
+
+@media(max-width:700px) {
+    .navbar {
+        background-color: rgba(0, 0, 0, 0%);
+        -webkit-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 0);
+        -moz-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 0);
+        box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 0);
+    }
+
+
+
+    .navbarlogo {
+        display: none;
+    }
+
+    .navbarBars {
+        left: calc(50% - 100px);
+        font-size: 5.5rem;
+
+    }
+
+    .navbarXmarkClassStart {
+        right: calc(50% - 40px);
+        font-size: 5.5rem;
+
+    }
+
+    .navbarXmarkClassStart:hover {
+        transform: rotate(360deg);
+    }
+
+    .navbarXmarkClassFinish {
+        right: calc(50% - 50px);
+    }
+
+    .navbarmobilestartZero {
+        position: absolute;
+        top: 12rem;
+        left: calc(50% - 95px);
+        width: 190px;
+        height: 6rem;
+        z-index: 10;
+        color: white;
+        font-size: 2.5rem;
+        border: 1px solid white;
+
+    }
+
+    .navbarmobilestartZero:hover {
+        font-size: 2.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartFirst {
+        position: absolute;
+        top: 21rem;
+        left: calc(50% - 95px);
+        width: 190px;
+        height: 6rem;
+        z-index: 10;
+        color: white;
+        font-size: 2.5rem;
+        border: 1px solid white;
+
+    }
+
+    .navbarmobilestartFirst:hover {
+        font-size: 2.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartSecond {
+        position: absolute;
+        top: 30rem;
+        left: calc(50% - 95px);
+        width: 190px;
+        height: 6rem;
+        z-index: 10;
+        color: white;
+        font-size: 2.5rem;
+        border: 1px solid white;
+
+    }
+
+    .navbarmobilestartSecond:hover {
+        font-size: 2.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartThird {
+        position: absolute;
+        top: 39rem;
+        left: calc(50% - 95px);
+        width: 190px;
+        height: 6rem;
+        z-index: 10;
+        color: white;
+        font-size: 2.5rem;
+        border: 1px solid white;
+
+    }
+
+    .navbarmobilestartThird:hover {
+        font-size: 2.2rem;
+        transform: translateY(20px)
+    }
+
+    .navbarmobilestartFourth {
+        width: 230px;
+        left: calc(50% - 115px);
+        font-size: 2.3rem;
+    }
+
+    .navbarmobilestartFourth:hover {
+        font-size: 2rem;
+        transform: translateY(20px)
+    }
+
+
+
+}
