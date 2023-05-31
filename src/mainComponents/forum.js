@@ -7,12 +7,15 @@ import Overlay from '../components/overlay';
 import Navbar from '../components/navbar';
 import Searching from '../components/searching'
 import { BrowserView, MobileView } from 'react-device-detect';
+import AddPost from '../components/addpost'
 import ImgBg from '../components/imgbg';
 
 const Forum = (props) => {
     const [posts, setPosts] = useState([]);
     const [komDodanyFalse, setKomDodanyFalse] = useState(false);
     const [refresh, setRefresh] = useState(false);
+    const [originalResponse, setOriginalResponse] = useState();
+
 
 
     if (props.store.ForumFlag) {
@@ -24,7 +27,6 @@ const Forum = (props) => {
                 return (res.json());
             })
             .then((res) => {
-                console.log("HERE");
                 let nr = -1;
                 let changeRes = res.map((ele) => {
                     nr++;
@@ -32,6 +34,7 @@ const Forum = (props) => {
                         {
                             ...ele,
                             nr: nr,
+                            originalNumber: nr,
                             comments: []
                         }
 
@@ -40,6 +43,7 @@ const Forum = (props) => {
                 return (changeRes)
             })
             .then((res) => {
+                setOriginalResponse(res);
                 console.log(res);
                 setPosts(res);
             })
@@ -88,7 +92,7 @@ const Forum = (props) => {
                         setRefresh(false);
                         setTimeout(() => {
                             try {
-                                const where = document.getElementsByClassName("forumContainerPost")[ele.nr]
+                                const where = document.getElementsByClassName("forumContainerPost")[ele.originalNumber]
                                 where.scrollIntoView({ behavior: "smooth" });
                             }
                             catch (error) {
@@ -116,11 +120,12 @@ const Forum = (props) => {
             <BrowserView className="app">
                 {props.store.loading ? <Loading>
                 </Loading> : <section className="forumContainer">
+                    <Navbar />
                     <Video />
                     <Overlay />
-                    <Navbar />
-                    <Searching posts={posts} setPosts={setPosts} />
-                    {komDodanyFalse ? <div className="komDodanyFalse">Muisz być zalogowany aby dodac komentarz</div> : null}
+                    <Searching originalRes={originalResponse} setPosts={setPosts} />
+                    <AddPost />
+                    {komDodanyFalse ? <div className="komDodanyFalse">You have to be logged to add comment ;)</div> : null}
 
                     {props.store.navbarmobile ? null :
                         posts.map((ele) => {
@@ -153,6 +158,7 @@ const Forum = (props) => {
                                     <div className="comments">
 
                                         <div onClick={() => {
+                                            setRefresh(false);
 
                                             if (document.getElementsByClassName("showcomments")[ele.nr].innerHTML === "Show comments") {
                                                 console.log("pobieram komentarze");
@@ -213,7 +219,8 @@ const Forum = (props) => {
                     <Navbar />
                     {/* <Overlay /> */}
                     <ImgBg />
-
+                    <Searching originalRes={originalResponse} setPosts={setPosts} />
+                    <AddPost />
 
                     {komDodanyFalse ? <div className="komDodanyFalse">Muisz być zalogowany aby dodac komentarz</div> : null}
                     {props.store.navbarmobile ? null :

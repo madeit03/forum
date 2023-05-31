@@ -5,8 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Searching = (props) => {
     const [searchingField, setSearchingField] = useState(false);
     const [searchingFieldClasses, setSearchingFieldClasses] = useState("");
-    const [searchingFieldValue, setSearchingFieldValue] = useState("");
-    const [newPosts, setNewPosts] = useState([]);
+    // const [searchingFieldValue, setSearchingFieldValue] = useState("");
+    // const [newPosts, setNewPosts] = useState([]);
 
     const handleClickSearch = () => {
 
@@ -23,9 +23,17 @@ const Searching = (props) => {
                 break;
             case "searchingfieldstart": {
                 setSearchingFieldClasses("searchingfieldend")
+                props.setPosts(props.originalRes)
                 setTimeout(() => {
                     setSearchingField(false);
                 }, 500)
+                setTimeout(() => {
+                    let xd = document.getElementsByClassName("showcomments");
+                    console.log("haha", xd.length)
+                    for (let i = 0; i < xd.length; i++) {
+                        xd.item(i).innerHTML = "Show comments"
+                    }
+                }, 300)
             }
                 break;
         }
@@ -33,10 +41,56 @@ const Searching = (props) => {
 
     }
     const handleChangeInput = (e) => {
-        setSearchingFieldValue(e.target.value);
-        props.setPosts([])
-        console.log("handleChange:", props.posts);
+        console.log(e.target.value);
+        let input = e.target.value;
+        let newPosts = [];
+        let nr = -1;
+        if (input.length > 0) {
+            props.originalRes.map((post) => {
+                console.log(post.temat);
+                let flag = true;
+                for (let i = 0; i < input.length; i++) {
+                    if (input[i].toLowerCase() == post.temat[i].toLowerCase()) {
 
+                    }
+                    else {
+
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    nr++;
+                    newPosts.push({
+                        ...post,
+                        nr: nr,
+                        comments: [],
+                    })
+                }
+
+
+
+            })
+            console.log("newPosts:", newPosts);
+            props.setPosts(newPosts);
+        }
+        else {
+            console.log("ustawiamy all")
+            console.log(props.originalRes)
+            props.setPosts(
+
+                props.originalRes,
+            )
+            setTimeout(() => {
+                let xd = document.getElementsByClassName("showcomments");
+                console.log("haha", xd.length)
+                for (let i = 0; i < xd.length; i++) {
+                    xd.item(i).innerHTML = "Show comments"
+                }
+            }, 300)
+
+
+        }
 
 
     }
@@ -45,7 +99,7 @@ const Searching = (props) => {
         <>
             <div className="searching">
                 <FontAwesomeIcon className="searchicon " onClick={handleClickSearch} icon={faSearch} />
-                {searchingField ? <input placeholder="topic" onChange={handleChangeInput} value={searchingFieldValue} className={searchingFieldClasses} /> : null}
+                {searchingField ? <input type="search" placeholder="topic" onChange={handleChangeInput} className={searchingFieldClasses} /> : null}
 
             </div>
 

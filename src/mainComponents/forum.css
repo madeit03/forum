@@ -8,32 +8,20 @@
     /* gap: 8rem; */
     z-index: 100;
 
-}
-
-.forumContainer>h1 {
-    /* background-color: white; */
-    position: absolute;
-    top: 15rem;
-    left: 0;
-    color: white;
-    /* background-color: red; */
-    width: 100%;
-    height: 5rem;
-    font-size: 3.5rem;
-    gap: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 
 }
+
+
+
+
+
 
 .komDodanyFalse {
     position: fixed;
     width: 100%;
     height: 10rem;
     top: -100%;
-    background-color: red;
+    background-color: rgba(255, 50, 70, 1);
     z-index: 30;
     display: flex;
     justify-content: center;
@@ -65,7 +53,7 @@
 .forumContainerPost {
 
     box-sizing: border-box;
-    width: 1200px;
+    width: 800px;
     display: flex;
     flex-direction: column;
     border-radius: 1%;
@@ -75,8 +63,11 @@
     -webkit-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
     -moz-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
     box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
-    margin-bottom: 10rem;
-
+    /* margin-bottom: 10rem; */
+    margin-top: 10rem;
+    /* background-color: red; */
+    border-radius: 30px;
+    border: 1px solid white;
 
 }
 
@@ -95,14 +86,14 @@
 }
 
 .ask>.forumautor {
-    border-radius: 7%;
+    border-radius: 30px;
 
     padding-left: 2rem;
     padding-right: 2rem;
     flex-basis: 25%;
     color: rgba(220, 225, 230, 1);
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 1.8rem;
     font-weight: 900;
     height: 8rem;
     max-height: 10rem;
@@ -117,7 +108,7 @@
 
 
     position: sticky;
-    top: 13rem;
+    top: 18rem;
 
 }
 
@@ -132,26 +123,27 @@
 }
 
 .forumtemat {
-    border-radius: 2%;
+
     flex-basis: 100%;
     color: rgba(220, 225, 230, 1);
     text-align: center;
-    font-size: 2.3rem;
+    font-size: 2rem;
     font-weight: 900;
     letter-spacing: 2px;
     background-color: rgba(20, 25, 30, 1);
     padding: 3rem;
+    border-radius: 30px;
 
 
 }
 
 
 .forumtresc {
-    border-radius: 2%;
+    border-radius: 30px;
     flex-basis: 100%;
     color: white;
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 2rem;
     background-color: rgba(20, 25, 30, 1);
     padding: 3rem;
     color: rgba(220, 225, 230, 1);
@@ -165,7 +157,7 @@
 .forumContainerPost>.addcomment {
 
     flex-basis: 100%;
-    min-height: 40rem;
+    min-height: 30rem;
     color: white;
     text-align: center;
     font-size: 4rem;
@@ -189,12 +181,12 @@
     outline: none;
     resize: none;
     width: 70%;
-    height: 28rem;
+    height: 20rem;
     font-size: 2.5rem;
-    border-radius: 2%;
     color: white;
     padding: 1.5rem;
     background-color: rgba(20, 25, 30, 1);
+    border-radius: 30px;
 
 
 
@@ -203,19 +195,23 @@
 .forumContainerPost>.addcomment>.sendcomment {
 
     cursor: pointer;
-    width: 30%;
+    width: 40%;
     padding: 2rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-radius: 7%;
     font-weight: 900;
     height: 7rem;
     background-color: rgba(20, 20, 20, 0.8);
-
+    border-radius: 30px;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .forumContainerPost>.addcomment>.sendcomment:hover {
     background-color: rgba(20, 20, 20, 1);
-    font-size: 2.3rem;
+    font-size: 2.1rem;
     text-shadow: 2px 2px 8px white;
 
 }
@@ -270,7 +266,7 @@
     justify-content: center;
     align-items: start;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1.5rem;
     /* background-color: red; */
 
 
@@ -290,7 +286,7 @@
     flex-basis: 25%;
     color: rgba(220, 225, 230, 1);
     text-align: center;
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     font-weight: 900;
     height: 8rem;
     max-height: 10rem;
@@ -306,6 +302,7 @@
 
     position: sticky;
     top: 13rem;
+    border-radius: 30px;
 
 
 }
@@ -317,7 +314,7 @@
     background-color: rgba(20, 25, 30, 1);
     padding: 2rem;
     flex-basis: 70%;
-    font-size: 2.5rem;
+    font-size: 2rem;
     text-align: center;
     border-radius: 2%;
     min-height: 8rem;
@@ -325,6 +322,7 @@
     padding-bottom: 2rem;
     max-width: 550px;
     overflow: auto;
+    border-radius: 30px;
 
 
 
@@ -355,20 +353,19 @@
     }
 
     .ask>.forumautor {
-        border-radius: 2%;
-        padding-top: 2.1rem;
         padding-left: 1rem;
         padding-right: 1rem;
         flex-basis: 25%;
         color: white;
         text-align: center;
-        font-size: 1.9rem;
+        font-size: 1.6rem;
         font-weight: 900;
         max-height: 10rem;
         overflow: hidden;
         background-color: rgba(20, 25, 30, 1);
         position: sticky;
         top: 0;
+
 
 
     }
@@ -385,7 +382,6 @@
     }
 
     .forumtemat {
-        border-radius: 2%;
         flex-basis: 100%;
         color: white;
         text-align: center;
@@ -400,7 +396,6 @@
 
 
     .forumtresc {
-        border-radius: 2%;
         padding: 2rem;
         flex-basis: 100%;
         color: white;
@@ -444,7 +439,6 @@
         width: 80%;
         height: 20rem;
         font-size: 2.5rem;
-        border-radius: 2%;
         color: white;
         padding: 1.5rem;
         background-color: rgba(20, 25, 30, 1);
@@ -459,14 +453,13 @@
         height: 80px;
         padding: 1.3rem;
         font-size: 1.9rem;
-        border-radius: 7%;
         font-weight: 900;
         background-color: rgba(20, 25, 30, 1);
 
     }
 
     .forumContainerPost>.addcomment>.sendcomment:hover {
-        background-color: rgba(20, 20, 20, 0.8);
+        background-color: rgba(10, 10, 10, 0.8);
         font-size: 2rem;
 
     }
@@ -529,9 +522,9 @@
 
         position: sticky;
         top: 0;
-        font-size: 1.5rem;
-        width: 80px;
-        border-radius: 2%;
+        font-size: 1.4rem;
+        width: 90px;
+
         padding-top: 0;
         padding-bottom: 0;
         min-height: 8rem;
@@ -547,9 +540,8 @@
     .comment>.commentodp {
         /* background-color: rgba(0, 0, 0, 85%); */
         width: 70%;
-        font-size: 1.9rem;
+        font-size: 1.7rem;
         text-align: center;
-        border-radius: 2%;
         min-height: 8rem;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
@@ -559,6 +551,12 @@
     }
 
 
+}
+
+@media(max-width:900px) {
+    .komDodanyFalse {
+        font-size: 1.7rem;
+    }
 }
 
 @media(max-width:800px) {
@@ -573,7 +571,7 @@
 
     .ask {
         flex-basis: 100%;
-        border-radius: 2%;
+
         flex-wrap: wrap;
         display: flex;
         padding: 2rem;
@@ -584,7 +582,7 @@
     }
 
     .ask>.forumautor {
-        border-radius: 2%;
+
 
 
         color: white;
@@ -612,7 +610,7 @@
         display: flex;
 
         font-weight: 900;
-        border-radius: 2%;
+
         flex-wrap: wrap;
         gap: 1rem;
 
@@ -620,7 +618,7 @@
     }
 
     .forumtemat {
-        border-radius: 2%;
+
         flex-basis: 100%;
         color: white;
         text-align: center;
@@ -635,7 +633,7 @@
 
 
     .forumtresc {
-        border-radius: 2%;
+
         padding: 2rem;
         flex-basis: 100%;
         color: white;
@@ -679,7 +677,7 @@
         width: 60%;
         height: 10rem;
         font-size: 1.2rem;
-        border-radius: 2%;
+
         color: white;
         padding: 1.5rem;
         background-color: rgba(20, 25, 30, 1);
@@ -694,7 +692,7 @@
         height: 60px;
         padding: 1.3rem;
         font-size: 1.2rem;
-        border-radius: 7%;
+
         font-weight: 900;
         background-color: rgba(20, 25, 30, 1);
 
@@ -766,29 +764,26 @@
         top: 0;
         font-size: 1.2rem;
         width: 50%;
-        border-radius: 2%;
+
         padding-top: 0;
         padding-bottom: 0;
-        min-height: 5.5rem;
+        min-height: 2.5rem;
+        height: 5.5rem;
         overflow: hidden;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: rgba(20, 25, 30, 1);
-        /* width: 300px; */
-        /* padding: 3rem; */
         flex-basis: 35%;
-        /* width: 280px; */
+
     }
 
 
 
     .comment>.commentodp {
         flex-basis: 60%;
-        ;
         font-size: 1.2rem;
         text-align: center;
-        border-radius: 2%;
         min-height: 5.5rem;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
@@ -808,7 +803,7 @@
 @media(max-width:500px) {
 
     .forumContainer {
-        gap: 5rem;
+        gap: 2rem;
     }
 
     .forumContainerPost {
@@ -816,6 +811,7 @@
         /* background-color: red; */
         width: 250px;
         padding-bottom: 2rem;
+        margin-top: 1rem;
 
 
     }
@@ -833,7 +829,7 @@
     }
 
     .ask>.forumautor {
-        border-radius: 2%;
+
 
 
         color: white;
@@ -849,8 +845,7 @@
         padding-top: 0.5rem;
         padding-bottom: 0.5rem;
         flex-basis: 100%;
-        border-radius: 5%;
-        /* background-color: red; */
+
 
         display: flex;
         justify-content: center;
@@ -872,7 +867,7 @@
     }
 
     .forumtemat {
-        border-radius: 2%;
+
         flex-basis: 100%;
         color: white;
         text-align: center;
@@ -888,7 +883,7 @@
 
 
     .forumtresc {
-        border-radius: 2%;
+
         padding: 2rem;
         flex-basis: 100%;
         color: white;
@@ -915,11 +910,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
         /* background-color: red; */
         flex-direction: column;
         /* background-color: green; */
-        min-height: 10rem;
+        min-height: 12rem;
         margin-top: -0.5rem;
 
 
@@ -935,7 +930,7 @@
         width: 70%;
         height: 5rem;
         font-size: 1rem;
-        border-radius: 5%;
+
         color: white;
         padding: 1rem;
         background-color: rgba(20, 25, 30, 1);
@@ -951,7 +946,7 @@
         height: 60px;
         padding: 0.8rem;
         font-size: 1.2rem;
-        border-radius: 5%;
+
         font-weight: 900;
         background-color: rgba(20, 25, 30, 1);
 
@@ -999,7 +994,7 @@
 
         padding: 0.5rem;
         flex-basis: 100%;
-        border-radius: 2%;
+
 
         display: flex;
 
@@ -1021,12 +1016,13 @@
 
         position: sticky;
         top: 0;
-        font-size: 1rem;
+        font-size: 0.8rem;
         width: 50%;
-        border-radius: 2%;
+
         padding-top: 0;
         padding-bottom: 0;
-        min-height: 4.5rem;
+        min-height: 3.5rem;
+        height: 5rem;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -1043,7 +1039,7 @@
         flex-basis: 65%;
         font-size: 1rem;
         text-align: center;
-        border-radius: 2%;
+
         min-height: 5.5rem;
         padding-top: 1.5rem;
         padding-bottom: 1rem;
@@ -1056,5 +1052,9 @@
         align-items: center;
         /* background-color: green; */
 
+    }
+
+    .komDodanyFalse {
+        font-size: 1.2rem;
     }
 }

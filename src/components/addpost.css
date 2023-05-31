@@ -1,0 +1,695 @@
+.addpost {
+    position: static;
+    /* top: 15rem; */
+    width: 800px;
+    height: 45rem;
+    background-color: rgba(0, 0, 0, 20%);
+    -webkit-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    -moz-box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    box-shadow: -5px 1px 61px 12px rgba(0, 0, 0, 1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* background-color: red; */
+    border-radius: 30px;
+    position: relative;
+    border: 1px solid white;
+}
+
+.errorsend {
+    position: absolute;
+    top: 9rem;
+    width: 100%;
+    height: 7rem;
+    background-color: rgba(255, 50, 70, 1);
+    z-index: 10;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.8rem;
+
+}
+
+.page1 {
+    width: 800px;
+    height: 45rem;
+    position: relative;
+    animation: page1animationdown .2s ease;
+    /* background-color: purple; */
+}
+
+
+
+@keyframes page1animationdown {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.page1Up {
+    animation: page1animationup .2s ease;
+}
+
+@keyframes page1animationup {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.page1info {
+    position: absolute;
+    top: 10%;
+    text-transform: capitalize;
+    width: 100%;
+    left: 0;
+    /* background-color: red; */
+    text-align: center;
+
+    color: white;
+    font-size: 4rem;
+
+}
+
+.dots {
+    position: absolute;
+    width: 100px;
+    height: 400px;
+    /* background-color: red; */
+    right: 0.5rem;
+    top: 10rem;
+
+}
+
+.page1dot1 {
+    color: white;
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+}
+
+.page1dot2 {
+    color: #111;
+    position: absolute;
+    top: 33.33%;
+    font-size: 2rem;
+}
+
+.page1dot3 {
+    color: #111;
+    position: absolute;
+    top: 66.66%;
+    font-size: 2rem;
+}
+
+.page1input {
+    position: absolute;
+    top: 35%;
+    background-color: rgba(20, 25, 30, 1);
+    border: none;
+    outline: none;
+    font-size: 2.3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    width: 450px;
+    height: 4.5rem;
+    left: calc(50% - 225px);
+    border-radius: 30px;
+    /* border: 1px solid white; */
+}
+
+.page1arrow {
+    color: white;
+    font-size: 7rem;
+    position: absolute;
+    top: 60%;
+    width: 5rem;
+    left: calc(50% - 2.5rem);
+    animation: page1arrowanimation 1.2s linear infinite;
+
+}
+
+@keyframes page1arrowanimation {
+    0% {
+        top: 60%;
+    }
+
+    50% {
+        top: 65%;
+    }
+
+    100% {
+        top: 60%;
+    }
+}
+
+
+.error {
+    position: absolute;
+    top: 25rem;
+    width: 100%;
+    height: 5rem;
+    background-color: rgba(255, 50, 70, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+}
+
+.page2 {
+    width: 800px;
+    height: 45rem;
+    position: relative;
+    animation: page2animationup .2s ease;
+    /* background-color: orange; */
+    /* transform: translateY(20%); */
+}
+
+
+.page2input {
+    position: absolute;
+    top: 23%;
+    width: 550px;
+    height: 25rem;
+    left: calc(50% - 275px);
+    background-color: rgba(20, 25, 30, 1);
+    color: white;
+    font-size: 2.2rem;
+    resize: none;
+    outline: none;
+    border: none;
+    padding: 1rem;
+    border-radius: 30px;
+}
+
+.page2dot1 {
+    color: #111;
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+}
+
+.page2dot2 {
+    color: white;
+    position: absolute;
+    top: 33.33%;
+    font-size: 2rem;
+}
+
+.page2dot3 {
+    color: #111;
+    position: absolute;
+    top: 66.66%;
+    font-size: 2rem;
+}
+
+@keyframes page2animationup {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.page2down {
+    animation: page2animationdown .2s ease;
+}
+
+.page2downxd {
+    animation: page2animationdownxd .2s ease;
+
+}
+
+@keyframes page2animationdownxd {
+    0% {
+        top: -100%;
+
+    }
+
+    100% {
+        top: 0;
+    }
+
+}
+
+
+@keyframes page2animationdown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.page2up {
+    animation: page2animationupxd .2s ease;
+}
+
+@keyframes page2animationupxd {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: -100%;
+    }
+}
+
+
+.page2arrowfirst {
+    color: white;
+    font-size: 7rem;
+    position: absolute;
+    top: 2%;
+    width: 5rem;
+    left: calc(50% - 2.5rem);
+    animation: page2page3arrowfirstanimation 1.2s linear infinite;
+}
+
+@keyframes page2page3arrowfirstanimation {
+    0% {
+        top: 2%;
+    }
+
+    50% {
+        top: 5%;
+    }
+
+    100% {
+        top: 2%;
+    }
+}
+
+.page2arrowsecond {
+    color: white;
+    font-size: 7rem;
+    position: absolute;
+    top: 82%;
+    width: 5rem;
+    left: calc(50% - 2.5rem);
+    animation: page2arrowsecondanimation 1.2s linear infinite;
+}
+
+@keyframes page2arrowsecondanimation {
+    0% {
+        top: 80%;
+    }
+
+    50% {
+        top: 83%;
+    }
+
+    100% {
+        top: 80%;
+    }
+}
+
+
+.page3 {
+    width: 800px;
+    height: 45rem;
+    position: relative;
+    animation: page3animationup .2s ease;
+    /* background-color: green; */
+}
+
+.page3dot1 {
+    color: #111;
+    position: absolute;
+    top: 0;
+    font-size: 2rem;
+}
+
+.page3dot2 {
+    color: #111;
+    position: absolute;
+    top: 33.33%;
+    font-size: 2rem;
+}
+
+.page3dot3 {
+    color: white;
+    position: absolute;
+    top: 66.66%;
+    font-size: 2rem;
+}
+
+@keyframes page3animationup {
+    0% {
+        transform: translateY(100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.page3down {
+    animation: page3animationdown .2s ease;
+}
+
+@keyframes page3animationdown {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+.page3arrow {
+    color: white;
+    font-size: 7rem;
+    position: absolute;
+    top: 2%;
+    width: 5rem;
+    left: calc(50% - 2.5rem);
+    animation: page2page3arrowfirstanimation 1.2s linear infinite;
+}
+
+.page3submit {
+    color: white;
+    position: absolute;
+    font-size: 5rem;
+    background-color: rgba(20, 25, 30, 1);
+    top: 40%;
+    width: 370px;
+    height: 8rem;
+    border-radius: 30px;
+    left: calc(50% - 185px);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: 0 0 3px white;
+    box-shadow: 0 0 10px rgba(50, 55, 60, 1);
+    cursor: pointer;
+}
+
+.page3submit:hover {
+    background-color: rgba(30, 35, 40, 1);
+}
+
+
+
+
+
+@media(max-width:1400px) {
+    .addpost {
+        width: 700px;
+        height: 40rem;
+
+    }
+
+    .page1 {
+        width: 700px;
+        height: 40rem;
+        position: relative;
+        animation: page1animationdown .2s ease;
+        /* background-color: purple; */
+    }
+
+    .page1info {
+        font-size: 4rem;
+    }
+
+    .page1input {
+        width: 400px;
+        left: calc(50% - 200px)
+    }
+
+    .dots {
+        top: 9.5rem;
+        /* background-color: green; */
+        right: 0;
+    }
+
+
+    .page2 {
+        width: 700px;
+        height: 40rem;
+        position: relative;
+        animation: page1animationdown .2s ease;
+        /* background-color: purple; */
+    }
+
+    .page2input {
+        width: 450px;
+        left: calc(50% - 225px);
+        height: 20rem;
+    }
+
+    .page3 {
+        width: 700px;
+        height: 40rem;
+        position: relative;
+        animation: page1animationdown .2s ease;
+    }
+}
+
+@media(max-width:800px) {
+    .addpost {
+        width: 400px;
+        height: 40rem;
+    }
+
+    .errorsend {
+        font-size: 1.6rem;
+    }
+
+    .page1 {
+        width: 400px;
+        height: 40rem;
+    }
+
+    .page1info {
+        font-size: 3.3rem;
+    }
+
+    .page1input {
+        top: 12rem;
+        width: 270px;
+        left: calc(50% - 135px);
+        font-size: 1.8rem;
+    }
+
+    .dots {
+        /* background-color: green; */
+        top: 13rem;
+        height: 300px;
+        width: 50px;
+    }
+
+    .page1dot1 {
+        font-size: 2rem;
+    }
+
+    .page1dot2 {
+        font-size: 2rem;
+    }
+
+    .page1dot3 {
+        font-size: 2rem;
+    }
+
+    .page2 {
+        width: 400px;
+        height: 40rem;
+    }
+
+    .page2input {
+        top: 12rem;
+        font-size: 1.8rem;
+        width: 270px;
+        height: 18rem;
+        left: calc(50% - 135px);
+    }
+
+    .page2dot1 {
+        font-size: 2rem;
+    }
+
+    .page2dot2 {
+        font-size: 2rem;
+    }
+
+    .page2dot3 {
+        font-size: 2rem;
+    }
+
+    .page3 {
+        width: 400px;
+        height: 40rem;
+    }
+
+    .page3dot1 {
+        font-size: 2rem;
+    }
+
+    .page3dot2 {
+        font-size: 2rem;
+    }
+
+    .page3dot3 {
+        font-size: 2rem;
+    }
+
+    .page3submit {
+        width: 270px;
+        height: 8rem;
+        left: calc(50% - 135px);
+    }
+
+
+    .error {
+        font-size: 1.5rem;
+    }
+}
+
+@media(max-width:500px) {
+    .addpost {
+        width: 250px;
+        height: 30rem;
+    }
+
+    .errorsend {
+        font-size: 1rem;
+        height: 5rem;
+    }
+
+    .page1 {
+        width: 400px;
+        height: 30rem;
+    }
+
+    .page1info {
+        font-size: 2.8rem;
+    }
+
+    .page1input {
+        height: 4rem;
+        top: 12rem;
+        width: 180px;
+        left: calc(50% - 90px);
+        font-size: 1.5rem;
+    }
+
+    .dots {
+        /* background-color: green; */
+        height: 300px;
+        width: 50px;
+        top: 10rem;
+
+    }
+
+    .page1dot1 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page1dot2 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page1dot3 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page1arrow {
+        font-size: 5rem;
+    }
+
+    .page2 {
+        width: 250px;
+        height: 30rem;
+    }
+
+
+
+    .page2input {
+        top: 9rem;
+        font-size: 1.4rem;
+        width: 180px;
+        height: 14rem;
+        left: calc(50% - 90px);
+    }
+
+    .page2arrowfirst {
+        font-size: 5rem;
+    }
+
+    .page2arrowsecond {
+        font-size: 5rem;
+    }
+
+    .page2dot1 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page2dot2 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page2dot3 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page3 {
+        width: 250px;
+        height: 30rem;
+    }
+
+
+    .page3dot1 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page3dot2 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page3dot3 {
+        right: 10px;
+        font-size: 1.2rem;
+    }
+
+    .page3submit {
+        width: 170px;
+        font-size: 3.5rem;
+        height: 6rem;
+        left: calc(50% - 85px);
+    }
+
+    .page3arrow {
+        font-size: 5rem;
+    }
+
+    .error {
+        font-size: 1rem;
+    }
+
+}

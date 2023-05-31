@@ -13,8 +13,8 @@ const Navbar = (props) => {
     useEffect(() => {
         let cookies = document.cookie;
         cookies = cookies.split(";");
-        console.log(cookies)
-        console.log(cookies.length)
+        // console.log(cookies)
+        // console.log(cookies.length)
         let login = "";
         if (cookies.length > 0) {
             for (let i = 0; i < cookies.length; i++) {
